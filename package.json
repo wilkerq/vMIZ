@@ -1,0 +1,34 @@
+{
+  "name": "vmix-control-panel",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react-dom": "^19.2.0",
+    "react": "^19.2.0",
+    "date-fns": "^4.1.0",
+    "react-dropzone": "^14.3.8",
+    "components": "latest",
+    "context": "latest",
+    "pages": "latest",
+    "services": "latest",
+    "types": "latest",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "url": "^0.11.4",
+    "cors": "^2.8.5",
+    "path": "^0.12.7",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

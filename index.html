@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel de Controle vMix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Estilo adicional para um visual um pouco mais polido, combinando com a estética shadcn */
+      body {
+        background-color: #020817; /* Um azul bem escuro, comum em dashboards modernos */
+        color: #e2e8f0; /* Um cinza/azulado claro para o texto */
+      }
+      /* Animação para o menu de contexto */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      .animate-fade-in-fast {
+        animation: fadeIn 0.1s ease-out;
+      }
+      
+      /* Estilos de Impressão */
+      @media print {
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        
+        /* Oculta toda a UI não essencial */
+        header, aside, .no-print {
+          display: none !important;
+        }
+
+        /* Garante que a área de conteúdo principal ocupe a página inteira */
+        main {
+          padding: 0 !important;
+          margin: 0 !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        
+        /* Estilos gerais para conteúdo imprimível */
+        .printable-area {
+          display: block !important;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          border: none !important;
+          box-shadow: none !important;
+          background: #ffffff !important;
+          color: #000000 !important;
+        }
+
+        .printable-area h1, .printable-area h2, .printable-area h3, .printable-area p {
+          color: #000000 !important;
+        }
+        
+        .printable-area table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        
+        .printable-area th, .printable-area td {
+          border: 1px solid #ccc;
+          padding: 8px;
+          text-align: left;
+        }
+        
+        .printable-area th {
+          background-color: #f2f2f2;
+        }
+        
+        /* Sobrescrita específica para a visão do Teleprompter */
+        .teleprompter-print-view {
+          font-size: 18pt !important;
+          line-height: 1.5;
+        }
+
+        .teleprompter-print-view h1, .teleprompter-print-view h2, .teleprompter-print-view p {
+            font-family: 'Times New Roman', Times, serif;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "date-fns/": "https://aistudiocdn.com/date-fns@^4.1.0/",
+    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
+    "react-dropzone": "https://aistudiocdn.com/react-dropzone@^14.3.8",
+    "components/": "/components/",
+    "context/": "/context/",
+    "pages/": "/pages/",
+    "services/": "/services/",
+    "types": "/types.ts",
+    "express": "https://aistudiocdn.com/express@^5.1.0",
+    "fs": "https://aistudiocdn.com/fs@^0.0.1-security",
+    "url": "https://aistudiocdn.com/url@^0.11.4",
+    "cors": "https://aistudiocdn.com/cors@^2.8.5",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "node-fetch": "https://aistudiocdn.com/node-fetch@^3.3.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

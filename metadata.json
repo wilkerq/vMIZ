@@ -1,0 +1,5 @@
+{
+  "name": "vMix Control Panel",
+  "description": "A foundational control panel for vMix, focusing on stability, scalability, and an excellent developer experience. It includes robust authentication with Firebase, a simple dashboard structure, and is ready for future modules like Media Asset Management (MAM) and Playout control.",
+  "requestFramePermissions": []
+}
